@@ -1,6 +1,6 @@
 {
   "name": "hardware-info",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight way to get the hardware information.",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,9 @@
     "default": "./index.js"
   },
   "files": [
-		"index.js",
-		"index.d.ts"
-	],
+    "index.js",
+    "index.d.ts"
+  ],
   "devDependencies": {
     "ava": "^5.3.1",
     "typescript": "^5.2.2",
