@@ -16,4 +16,4 @@ console.log(await getRam());
 //=> '{ total: '15.93 GB', free: '7.15 GB' }'
 ```
 ## Unpacked Size
-1.23 kB
+Less than 5 kB
