@@ -2,9 +2,9 @@ import os from 'node:os';
 
 const cpus = os.cpus();
 
-export function getCpus() {
+export function getCpu() {
 	return {
-		total: Number.parseInt(cpus.length, 10),
+		threads: Number.parseInt(cpus.length, 10),
 		model: `${cpus[0].model}`,
 		speed: Number.parseInt(cpus[0].speed, 10),
 	};
@@ -15,6 +15,34 @@ export function getRam() {
 		total: formatBytes(os.totalmem()),
 		free: formatBytes(os.freemem()),
 	};
+}
+
+export function getOsArch() {
+	return {
+		arch: `${os.arch()}`,
+	};
+}
+
+export function getNetInterfaces() {
+	const interfaces = os.networkInterfaces();
+	const response = Object.keys(interfaces).map(element => {
+		if (Array.isArray(interfaces[element])) {
+			return {
+				name: element,
+				addresses: interfaces[element].map(_interface => ({
+					path: _interface.address,
+					internal: _interface.internal,
+				})),
+			};
+		}
+
+		return {
+			name: element,
+			addresses: interfaces[element].address,
+		};
+	});
+
+	return response;
 }
 
 function formatBytes(bytes) {

@@ -1,4 +1,4 @@
-export function getCpus(): {
+export function getCpu(): {
 	total: number;
 	model: string;
 	speed: number;
