@@ -1,10 +1,12 @@
 {
   "name": "hardware-info",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight way to get the hardware information.",
   "main": "index.js",
   "scripts": {
-    "test": "xo && ava && tsc index.d.ts"
+    "test": "xo && ava && tsc index.d.ts",
+    "lint:fix": "xo --fix",
+    "generate:tsc": "tsc index.js --declaration --emitDeclarationOnly --allowJs --outDir ."
   },
   "author": "Paulo Cardoso",
   "license": "ISC",

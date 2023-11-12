@@ -30,15 +30,16 @@ export function getNetInterfaces() {
 			return {
 				name: element,
 				addresses: interfaces[element].map(_interface => ({
-					path: _interface.address,
-					internal: _interface.internal,
+					path: `${_interface.address}`,
+					internal: Boolean(_interface.internal),
 				})),
 			};
 		}
 
 		return {
 			name: element,
-			addresses: interfaces[element].address,
+			addresses: `${interfaces[element].address}`,
+			internal: Boolean(interfaces[element].internal),
 		};
 	});
 
