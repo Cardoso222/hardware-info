@@ -1,6 +1,6 @@
 {
   "name": "hardware-info",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A lightweight way to get the hardware information.",
   "main": "index.js",
   "scripts": {
@@ -33,5 +33,9 @@
     "32-bit",
     "hardware",
     "iot"
-  ]
+  ],
+  "repository": {
+      "type": "git",
+      "url": " git@github.com:Cardoso222/hardware-info.git"
+  }
 }

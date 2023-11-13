@@ -7,7 +7,7 @@ A lightweight way to get the hardware information.
 ## Usage
 
 ```javascript
-import {getCpu, getRam, get} from 'hardware-info';
+import {getCpu, getRam, getOsArch} from 'hardware-info';
 
 console.log(getCpu());
 // => { threads: 16, model: 'Intel(R) Core(TM) i7-10700F CPU @ 2.90GHz', speed: 2904 }'
